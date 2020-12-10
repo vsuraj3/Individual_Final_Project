@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="card" class="m-5 p-2">
+    <h5 class="card-title">{{ home.fldIndex }} - {{ home.fldZip }}</h5>
+
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Space sq ft: {{ home.fldLivingSpacesqr }}</li>
+        <li class="list-group-item">Beds: {{ home.fldBeds }}</li>
+        <li class="list-group-item">Year: {{ home.fldYear }}</li>
+        <li class="list-group-item">Baths: {{ home.fldBaths }}</li>
+        <li class="list-group-item">Listing Price: {{ home.fldListPrice }}</li>
+    </ul>
+    <div class="card-body">
+        <a href="/edit/{{home.id}}" class="card-link btn btn-primary">edit</a>
+    </div>
+</div>
+<form action="/delete/{{home.id}}" method="post"><button type="submit" class="btn btn-danger">Delete</button></form>
+
+
+{% endblock %}

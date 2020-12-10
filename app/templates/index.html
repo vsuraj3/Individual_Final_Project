@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Home Index</th>
+        <th scope="col">Zip Code</th>
+        <th scope="col">Baths in Home</th>
+        <th scope="col">Living Space (sqr ft)</th>
+        <th scope="col">Beds in Home</th>
+        <th scope="col">Year Built</th>
+        <th scope="col">Listing Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for home in homes %}
+    <tr>
+        <td><a href="view/{{home.id}}">{{ home.fldIndex }}</a></td>
+        <td>{{ home.fldLivingSpacesqr }}</td>
+        <td>{{ home.fldBeds }}</td>
+        <td>{{ home.fldBaths }}</td>
+        <td>{{ home.fldZip }}</td>
+        <td>{{ home.fldYear }}</td>
+        <td>{{ home.fldListPrice }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

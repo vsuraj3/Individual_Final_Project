@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/edit/{{home.id}}" method="post">
+    <div class="row">
+        <div class="col">
+            <label for="fldIndex">Home Index</label>
+            <input id="fldIndex" type="text" class="form-control" placeholder="Home Index" name="fldName" value="{{home.fldIndex}}">
+        </div>
+        <div class="col">
+            <label for="fldZip">Zip Code</label>
+            <input id="fldZip" type="text" class="form-control" placeholder="Zip Code" name="fldZip" value="{{home.fldZip}}">
+        </div>
+        <div class="col">
+            <label for="fldBaths">Baths in Home</label>
+            <input id="fldBaths" type="text" class="form-control" placeholder="Home Baths" name="fldBaths" value="{{home.fldBaths}}">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <label for="fldLivingSpacesqr">Living Space (sqr ft)</label>
+            <input id="fldLivingSpacesqr" type="text" class="form-control" placeholder="Square ft" name="fldLivingSpacesqr" value="{{home.fldLivingSpacesqr}}">
+        </div>
+        <div class="col">
+            <label for="fldBeds">Beds in Home</label>
+            <input id="fldBeds" type="text" class="form-control" placeholder="Home beds" name="fldBeds" value="{{home.fldBeds}}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="fldYear">Year Built</label>
+            <input id="fldYear" type="text" class="form-control" placeholder="Year Built" name="fldYear" value="{{home.fldYear}}">
+        </div>
+        <div class="col">
+            <label for="fldListPrice">Listing Price</label>
+            <input id="fldListPrice" type="text" class="form-control" placeholder="Listing Price" name="fldListingPrice" value="{{home.fldListPrice}}">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+
+</form>
+{% endblock %}
